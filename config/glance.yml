@@ -1,0 +1,95 @@
+theme:
+  background-color: 0 0 16
+  primary-color: 43 59 81
+  positive-color: 61 66 44
+  negative-color: 6 96 59
+  
+pages:
+  - name: Home
+    columns:
+      - size: small
+        widgets:
+          - type: calendar
+            first-day-of-week: monday
+
+          - type: rss
+            limit: 10
+            collapse-after: 4
+            cache: 12h
+            feeds:
+              - url: https://www.dr.dk/nyheder/service/feeds/allenyheder
+                title: DR Nyheder
+              - url: https://www.berlingske.dk/content/rss
+                title: Berlingske
+              - url: https://www.version2.dk/rss
+                title: Version2.dk
+              - url: https://9to5mac.com/feed/
+                title: 9to5mac
+              - url: https://www.wired.com/feed/rss
+                title: Wired
+
+          - type: twitch-channels
+            channels:
+              - sovietwomble
+              - wirtual
+              - robcdee
+              - themrsark
+              - summit1g
+
+      - size: full
+        widgets:
+          - type: group
+            widgets:
+              - type: hacker-news
+              - type: lobsters
+
+          - type: videos
+            channels:
+              - UCXuqSBlHAE6Xw-yeJA0Tunw
+              - UC-lHJZR3Gqxm24_Vd_AJ5Yw
+              - UCfpCQ89W9wjkHc8J_6eTbBg
+              - UCf-vV5woXPFpkvZKwooWoyw
+              - UCSeb5KSN6BC1c0WwEjUzM_A
+              - UCY1kMZp36IQSyNx_9h4mpCg
+              - UCRijo3ddMTht_IHyNSNXpNQ
+
+          - type: group
+            widgets:
+              - type: reddit
+                subreddit: technology
+                show-thumbnails: true
+              - type: reddit
+                subreddit: dankmemes
+                show-thumbnails: true
+              - type: reddit
+                subreddit: ProgrammerHumor
+                show-thumbnails: true
+              - type: reddit
+                subreddit: wallstreetbets
+                show-thumbnails: true
+
+      - size: small
+        widgets:
+          - type: weather
+            location: Copenhagen, Denmark
+            units: metric
+            hour-format: 24h
+
+          - type: markets
+            markets:
+              - symbol: TSLA
+                name: Tesla
+              - symbol: BTC-USD
+                name: Bitcoin
+              - symbol: NVDA
+                name: NVIDIA
+
+          - type: repository
+            repository: adrnl1ne/DLS_Banking_App
+            pull-requests-limit: 5
+            issues-limit: 3
+            commits-limit: 3
+                
+          - type: docker-containers
+            hide-by-default: false
+
