@@ -14,8 +14,8 @@ pages:
 
           - type: rss
             limit: 10
-            collapse-after: 4
-            cache: 12h
+            collapse-after: 7
+            cache: 30m
             feeds:
               - url: https://www.dr.dk/nyheder/service/feeds/allenyheder
                 title: DR Nyheder
@@ -27,14 +27,6 @@ pages:
                 title: 9to5mac
               - url: https://www.wired.com/feed/rss
                 title: Wired
-
-          - type: twitch-channels
-            channels:
-              - sovietwomble
-              - wirtual
-              - robcdee
-              - themrsark
-              - summit1g
 
       - size: full
         widgets:
@@ -89,7 +81,15 @@ pages:
             pull-requests-limit: 5
             issues-limit: 3
             commits-limit: 3
+
+          - type: twitch-channels
+            channels:
+              - sovietwomble
+              - wirtual
+              - robcdee
+              - themrsark
+              - summit1g
                 
-          - type: docker-containers
-            hide-by-default: false
+          # - type: docker-containers
+          #   hide-by-default: false
 
